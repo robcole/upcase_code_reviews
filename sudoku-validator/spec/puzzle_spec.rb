@@ -79,7 +79,7 @@ describe Puzzle do
   end
 
   describe "#subgroups_valid?" do
-    context "when any row is invalid" do
+    context "when any subgroup is invalid" do
       it "should return false" do
         file = File.read("spec/fixtures/invalid_due_to_subgroup_dupe.sudoku")
         invalid_subgroup_puzzle = Puzzle.new(file)
@@ -87,7 +87,7 @@ describe Puzzle do
       end
     end
 
-    context "when the rows are all valid"  do
+    context "when the subgroups are all valid"  do
       it "should return true" do
         file = File.read("spec/fixtures/valid_complete.sudoku")
         valid_subgroup_puzzle = Puzzle.new(file)
